@@ -1,4 +1,4 @@
-import { mumble } from "../lib/mumble";
+import { mumble } from "../lib/mumble.js";
 // require("../lib/mumble.js");
 var assert = require("assert");
 
