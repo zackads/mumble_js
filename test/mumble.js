@@ -7,4 +7,9 @@ describe("Mumble", function () {
     const input_string = "";
     assert.strictEqual("", mumble(input_string));
   });
+
+  it("handles single character inputs", function () {
+    const input_string = "Z";
+    assert.strictEqual("Z", mumble(input_string));
+  });
 });
