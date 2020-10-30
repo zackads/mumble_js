@@ -31,18 +31,13 @@ describe("Mumble", function () {
     };
   });
 
-  it("handles a single lowercase letter input", function () { // encourages TPP #5: statement -> statements
-    const input_string = 'a';
-    const expected_output = 'A';
-    assert.strictEqual(expected_output, mumble(input_string)); 
-    // the test challenges the main function to transform and evolve
-  });
-
-  it("handles another single lowercase letter input", function() {
-    const input_string = "z";
-    const expected_output = 'Z';
-    assert.strictEqual(expected_output, mumble(input_string));
-  });
+  it("handles several single lowercase letter inputs", function() {
+    const input_chars = ['a', 'z', 'y'];
+    const output_chars = ['A', 'Z', 'Y'];
+    for (let i = 0; i < input_chars.length; i += 1) {
+      assert.strictEqual(output_chars[i], mumble(input_chars[i]));
+    };
+  })
 });
 
 
