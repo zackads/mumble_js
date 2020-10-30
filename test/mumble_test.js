@@ -44,4 +44,10 @@ describe("Mumble", function () {
     const expected_output = "A-Aa";
     assert.strictEqual(expected_output, mumble(input_string));
   });
+
+  it("handles two different uppercase letter inputs", function() {
+    const input_string = "YZ";
+    const expected_output = "Y-Zz";
+    assert.strictEqual(expected_output, mumble(input_string))
+  })
 });
