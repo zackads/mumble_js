@@ -38,9 +38,16 @@ describe("Mumble", function () {
       assert.strictEqual(output_chars[i], mumble(input_chars[i]));
     };
   })
+
+  it("handles two uppercase letter inputs", function() {
+    const input_string = "AA";
+    const expected_output = "A-Aa";
+    assert.strictEqual(expected_output, mumble(input_string));
+  });
+
+  it("handles two different uppercase letter inputs", function() {
+    const input_string = "YZ";
+    const expected_output = "Y-Zz";
+    assert.strictEqual(expected_output, mumble(input_string))
+  })
 });
-
-
-
-// "abc" => "A-Bb-Ccc"
-// "abcde" => "A-Bb-Ccc-Dddd-Eeeee"
